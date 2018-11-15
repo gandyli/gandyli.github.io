@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -125,7 +125,7 @@
 
 
 
-  <title>Test | Hexo</title>
+  <title>Test | Hexo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -144,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -275,6 +275,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/14/Test/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/11/14/Test/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -299,15 +309,15 @@
       
 
       
-        <h1 id="这是一个测试文件，测试本博客是否能用"><a href="#这是一个测试文件，测试本博客是否能用" class="headerlink" title="这是一个测试文件，测试本博客是否能用"></a>这是一个测试文件，测试本博客是否能用</h1><pre><code class="cpp"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
+        <h1 id="这是一个测试文件，测试本博客是否能用"><a href="#这是一个测试文件，测试本博客是否能用" class="headerlink" title="这是一个测试文件，测试本博客是否能用"></a>这是一个测试文件，测试本博客是否能用</h1><pre><code class="lang-cpp">#include &lt;iostream&gt;
+using namespace std;
 
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>{
-    <span class="keyword">int</span> a, b;
-    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;
-    <span class="built_in">cout</span> &lt;&lt; a + b &lt;&lt; <span class="built_in">endl</span>;
-    <span class="keyword">return</span> <span class="number">0</span>;
+int main()
+{
+    int a, b;
+    cin &gt;&gt; a &gt;&gt; b;
+    cout &lt;&lt; a + b &lt;&lt; endl;
+    return 0;
 }
 </code></pre>
 <h2 id="结束！"><a href="#结束！" class="headerlink" title="结束！"></a>结束！</h2>
@@ -370,6 +380,12 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2018/11/14/Test/" data-title="Test" data-url="http://yoursite.com/2018/11/14/Test/">
+      </div>
+    </div>
 
   
 
@@ -616,42 +632,69 @@
 
   
 
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"andyli"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
 
 
 
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
 
   
 
@@ -663,6 +706,8 @@
   
 
   
+  
+
 
   
 
