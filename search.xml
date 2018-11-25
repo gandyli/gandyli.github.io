@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>Test</title>
+      <link href="/Test/Test/"/>
+      <url>/Test/Test/</url>
+      
+        <content type="html"><![CDATA[<p>这是一个测试文件，测试本博客是否能用  </p><pre><code class="cpp"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>{    <span class="keyword">int</span> a, b;    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;    <span class="built_in">cout</span> &lt;&lt; a + b &lt;&lt; <span class="built_in">endl</span>;    <span class="keyword">return</span> <span class="number">0</span>;}</code></pre><p>数学公式：</p><h1 id="huge-sum-limits-n-i-1-A-i"><a href="#huge-sum-limits-n-i-1-A-i" class="headerlink" title="$$\huge\sum\limits^n_{i=1}{A[i]}$$"></a>$$\huge\sum\limits^n_{i=1}{A[i]}$$</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown, blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
