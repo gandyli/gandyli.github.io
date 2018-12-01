@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>andyli的博客</title>
+  
+  <subtitle>蒟蒻andyli的博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://gandyli.github.io/"/>
+  <updated>2018-11-25T04:34:58.428Z</updated>
+  <id>http://gandyli.github.io/</id>
+  
+  <author>
+    <name>andyli</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test</title>
+    <link href="http://gandyli.github.io/Test/Test/"/>
+    <id>http://gandyli.github.io/Test/Test/</id>
+    <published>2018-11-14T13:23:07.214Z</published>
+    <updated>2018-11-25T04:34:58.428Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一个测试文件，测试本博客是否能用  </p><pre><code class="cpp"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>{    <span class="keyword">int</span> a, b;    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;    <span class="built_in">cout</span> &lt;&lt; a + b &lt;&lt; <span class="built_in">endl</span>;    <span class="keyword">return</span> <span class="number">0</span>;}</code></pre><p>数学公式：</p><h1 id="huge-sum-limits-n-i-1-A-i"><a href="#huge-sum-limits-n-i-1-A-i" class="headerlink" title="$$\huge\sum\limits^n_{i=1}{A[i]}$$"></a>$$\huge\sum\limits^n_{i=1}{A[i]}$$</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是一个测试文件，测试本博客是否能用  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;
+      
+    
+    </summary>
+    
+      <category term="Test" scheme="http://gandyli.github.io/categories/Test/"/>
+    
+    
+      <category term="markdown, blog" scheme="http://gandyli.github.io/tags/markdown-blog/"/>
+    
+  </entry>
+  
+</feed>
