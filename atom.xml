@@ -5,9 +5,9 @@
   <subtitle>蒟蒻andyli的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://gandyli.github.io/"/>
+  <link href="http://www.gandyli.xyz/"/>
   <updated>2018-11-25T04:34:58.428Z</updated>
-  <id>http://gandyli.github.io/</id>
+  <id>http://www.gandyli.xyz/</id>
   
   <author>
     <name>andyli</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Test</title>
-    <link href="http://gandyli.github.io/Test/Test/"/>
-    <id>http://gandyli.github.io/Test/Test/</id>
+    <link href="http://www.gandyli.xyz/Test/Test/"/>
+    <id>http://www.gandyli.xyz/Test/Test/</id>
     <published>2018-11-14T13:23:07.214Z</published>
     <updated>2018-11-25T04:34:58.428Z</updated>
     
@@ -35,10 +35,10 @@
     
     </summary>
     
-      <category term="Test" scheme="http://gandyli.github.io/categories/Test/"/>
+      <category term="Test" scheme="http://www.gandyli.xyz/categories/Test/"/>
     
     
-      <category term="markdown, blog" scheme="http://gandyli.github.io/tags/markdown-blog/"/>
+      <category term="markdown, blog" scheme="http://www.gandyli.xyz/tags/markdown-blog/"/>
     
   </entry>
   
