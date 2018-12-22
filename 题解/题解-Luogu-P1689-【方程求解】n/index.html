@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="题解,Luogu,">
 
 
 
@@ -113,16 +113,18 @@
 
 
 
-<meta name="description" content="这是andyli的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="andyli的博客">
-<meta property="og:url" content="https://www.gandyli.xyz/tags/2018/index.html">
+<meta name="description" content="这一题基本思路就是模拟，如果想出来了几乎没什么难度。字符串用C++自带的string类就可以，非常方便。注意题目说可能有多余的空格，因此在输入后还要再转换到一个新的字符串里面。 代码中我多次用到了一个函数stoi，从C++11才支持，因此在竞赛中不可以使用。我在这里自己写了一个stoi2，供大家参考。 12345678910int stoi2(string str) // 支持负数&amp;#123;">
+<meta name="keywords" content="题解,Luogu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="题解 Luogu P1689 【方程求解】n">
+<meta property="og:url" content="https://www.gandyli.xyz/题解/题解-Luogu-P1689-【方程求解】n/index.html">
 <meta property="og:site_name" content="andyli的博客">
-<meta property="og:description" content="这是andyli的博客">
+<meta property="og:description" content="这一题基本思路就是模拟，如果想出来了几乎没什么难度。字符串用C++自带的string类就可以，非常方便。注意题目说可能有多余的空格，因此在输入后还要再转换到一个新的字符串里面。 代码中我多次用到了一个函数stoi，从C++11才支持，因此在竞赛中不可以使用。我在这里自己写了一个stoi2，供大家参考。 12345678910int stoi2(string str) // 支持负数&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-22T04:11:28.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="andyli的博客">
-<meta name="twitter:description" content="这是andyli的博客">
+<meta name="twitter:title" content="题解 Luogu P1689 【方程求解】n">
+<meta name="twitter:description" content="这一题基本思路就是模拟，如果想出来了几乎没什么难度。字符串用C++自带的string类就可以，非常方便。注意题目说可能有多余的空格，因此在输入后还要再转换到一个新的字符串里面。 代码中我多次用到了一个函数stoi，从C++11才支持，因此在竞赛中不可以使用。我在这里自己写了一个stoi2，供大家参考。 12345678910int stoi2(string str) // 支持负数&amp;#123;">
 
 
 
@@ -152,7 +154,7 @@
 
 
 
-  <link rel="canonical" href="https://www.gandyli.xyz/tags/2018/">
+  <link rel="canonical" href="https://www.gandyli.xyz/题解/题解-Luogu-P1689-【方程求解】n/">
 
 
 
@@ -184,7 +186,7 @@
 </style>
 
 
-  <title>标签: 2018 | andyli的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>题解 Luogu P1689 【方程求解】n | andyli的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -203,7 +205,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -358,52 +360,247 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>2018<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.gandyli.xyz/题解/题解-Luogu-P1689-【方程求解】n/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="andyli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/usericon.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="andyli的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/题解/题解-Luogu-P4470-【BJWC2018-售票】/" itemprop="url">
-              
-                <span itemprop="name">题解 Luogu P4470 【BJWC2018 售票】</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">题解 Luogu P1689 【方程求解】n</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-22T11:59:34+08:00" content="2018-12-22">
-          12-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-22T12:10:42+08:00">
+                2018-12-22
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/题解/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/题解/题解-Luogu-P1689-【方程求解】n/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/题解/题解-Luogu-P1689-【方程求解】n/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/题解/题解-Luogu-P1689-【方程求解】n/" class="leancloud_visitors" data-flag-title="题解 Luogu P1689 【方程求解】n">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span> ℃ </span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一题基本思路就是模拟，如果想出来了几乎没什么难度。字符串用<code>C++</code>自带的<code>string类</code>就可以，非常方便。注意题目说可能有多余的空格，因此在输入后还要再转换到一个新的字符串里面。</p>
+<p>代码中我多次用到了一个函数<code>stoi</code>，从<code>C++11</code>才支持，因此在竞赛中不可以使用。我在这里自己写了一个<code>stoi2</code>，供大家参考。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">stoi2</span><span class="params">(<span class="built_in">string</span> str)</span> <span class="comment">// 支持负数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> f = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (str[<span class="number">0</span>] == <span class="string">'-'</span>)</span><br><span class="line">        f = <span class="number">-1</span>, str = str.substr(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; str.length(); i++)</span><br><span class="line">        x = (x &lt;&lt; <span class="number">1</span>) + (x &lt;&lt; <span class="number">3</span>) + (str[i] ^ <span class="number">48</span>);</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>其实就是快读</del>  </p>
+<hr>
+<p>主程序代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">stoi2</span><span class="params">(<span class="built_in">string</span> str)</span> <span class="comment">// 支持负数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> f = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (str[<span class="number">0</span>] == <span class="string">'-'</span>)</span><br><span class="line">        f = <span class="number">-1</span>, str = str.substr(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; str.length(); i++)</span><br><span class="line">        x = (x &lt;&lt; <span class="number">1</span>) + (x &lt;&lt; <span class="number">3</span>) + (str[i] ^ <span class="number">48</span>);</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> str;</span><br><span class="line">    getline(<span class="built_in">cin</span>, str);</span><br><span class="line">    <span class="built_in">string</span> newstr;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : str)</span><br><span class="line">        <span class="keyword">if</span> (c != <span class="string">' '</span>)</span><br><span class="line">            newstr.push_back(c);</span><br><span class="line">    <span class="keyword">size_t</span> posq = newstr.find(<span class="string">'?'</span>), posp = newstr.find(<span class="string">'+'</span>), posj = newstr.find(<span class="string">'-'</span>), pose = newstr.find(<span class="string">'='</span>);</span><br><span class="line">    <span class="keyword">int</span> ans;</span><br><span class="line">    <span class="keyword">if</span> (posq &gt; pose)</span><br><span class="line">        <span class="keyword">if</span> (posp != <span class="built_in">string</span>::npos)</span><br><span class="line">            ans = stoi(newstr.substr(<span class="number">0</span>, posp)) + stoi(<span class="built_in">string</span>(newstr.begin() + posp + <span class="number">1</span>, newstr.begin() + pose));</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            ans = stoi(newstr.substr(<span class="number">0</span>, posj)) - stoi(<span class="built_in">string</span>(newstr.begin() + posj + <span class="number">1</span>, newstr.begin() + pose));</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (posp != <span class="built_in">string</span>::npos)</span><br><span class="line">        <span class="keyword">if</span> (posp &gt; posq)</span><br><span class="line">            ans = stoi(newstr.substr(pose + <span class="number">1</span>)) - stoi(<span class="built_in">string</span>(newstr.begin() + posp + <span class="number">1</span>, newstr.begin() + pose));</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            ans = stoi(newstr.substr(pose + <span class="number">1</span>)) - stoi(newstr.substr(<span class="number">0</span>, posp));</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">if</span> (posj &gt; posq)</span><br><span class="line">            ans = stoi(<span class="built_in">string</span>(newstr.begin() + posj + <span class="number">1</span>, newstr.begin() + pose)) + stoi(newstr.substr(pose + <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            ans = stoi(newstr.substr(<span class="number">0</span>, posj)) - stoi(newstr.substr(pose + <span class="number">1</span>));</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>看起来可能有点乱，但是如果你仔细分析这些句子的意思，就能明白其中的意思。（<del>怎么跟语文一样QAQ</del>）</p>
 
       
     </div>
+    
+    
+    
 
+    
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/题解/题解-Luogu-P1689-【方程求解】n/">题解 Luogu P1689 【方程求解】n</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 andyli 的个人博客">andyli</a></p>
+  <p><span>发布时间:</span>2018年12月22日 - 12:12</p>
+  <p><span>最后更新:</span>2018年12月22日 - 12:12</p>
+  <p><span>原始链接:</span><a href="/题解/题解-Luogu-P1689-【方程求解】n/" title="题解 Luogu P1689 【方程求解】n">https://www.gandyli.xyz/题解/题解-Luogu-P1689-【方程求解】n/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.gandyli.xyz/题解/题解-Luogu-P1689-【方程求解】n/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+
+      
+</div>
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-bookmark"></i> 感谢阅读-------------</div>
+    
+</div>
+
+  
+</div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/题解/" rel="tag"><i class="fa fa-tag"></i> 题解</a>
+          
+            <a href="/tags/Luogu/" rel="tag"><i class="fa fa-tag"></i> Luogu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/题解/题解-UVA232-【Crossword-Answers】/" rel="next" title="题解 UVA232 【Crossword Answers】">
+                <i class="fa fa-chevron-left"></i> 题解 UVA232 【Crossword Answers】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/题解/题解-Luogu-P3879-【TJOI2010-阅读理解】/" rel="prev" title="题解 Luogu P3879 【TJOI2010 阅读理解】">
+                题解 Luogu P3879 【TJOI2010 阅读理解】 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -411,6 +608,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -691,6 +895,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
