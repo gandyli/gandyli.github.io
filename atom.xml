@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.gandyli.xyz/"/>
-  <updated>2018-12-22T03:58:31.474Z</updated>
+  <updated>2018-12-22T04:00:13.453Z</updated>
   <id>https://www.gandyli.xyz/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>题解 P4470 【[BJWC2018]售票】</title>
+    <link href="https://www.gandyli.xyz/%E9%A2%98%E8%A7%A3/%E9%A2%98%E8%A7%A3-P4470-%E3%80%90-BJWC2018-%E5%94%AE%E7%A5%A8%E3%80%91/"/>
+    <id>https://www.gandyli.xyz/题解/题解-P4470-【-BJWC2018-售票】/</id>
+    <published>2018-12-22T03:59:34.000Z</published>
+    <updated>2018-12-22T04:00:13.453Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一道字符串的模拟题。我们可以利用<code>C++</code>的<code>string</code>来简化我们的代码。其实存储屏幕上的字母只需要用一维数组，然后在输出的时候处理一下。</p><p>把所有的都输入完以后，检查哪个目的地字符串的前缀是当前打进去的字符，然后把这个目的地前缀的后一个字符填充到屏幕里面。思路非常简单。</p><p>代码如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">55</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> A[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; A[i];</span><br><span class="line"><span class="built_in">string</span> read;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; read;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">screen</span><span class="params">(<span class="number">32</span>, <span class="string">'*'</span>)</span></span>;</span><br><span class="line"><span class="keyword">size_t</span> readlen = read.length();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line"><span class="keyword">if</span> (A[i].substr(<span class="number">0</span>, readlen) == read &amp;&amp; A[i].length() &gt; readlen) <span class="comment">// 注意这个目的地的长度必须大于读入的前缀</span></span><br><span class="line">screen[A[i][readlen] - <span class="string">'A'</span> + <span class="number">3</span>] = A[i][readlen];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; screen.length(); i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">cout</span>.put(screen[i]);</span><br><span class="line">    <span class="keyword">if</span> ((i + <span class="number">1</span>) % <span class="number">8</span> == <span class="number">0</span> &amp;&amp; i)</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是一道字符串的模拟题。我们可以利用&lt;code&gt;C++&lt;/code&gt;的&lt;code&gt;string&lt;/code&gt;来简化我们的代码。其实存储屏幕上的字母只需要用一维数组，然后在输出的时候处理一下。&lt;/p&gt;
+&lt;p&gt;把所有的都输入完以后，检查哪个目的地字符串的前缀是当前打进去的字符，
+      
+    
+    </summary>
+    
+      <category term="题解" scheme="https://www.gandyli.xyz/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+      <category term="题解" scheme="https://www.gandyli.xyz/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+      <category term="BJWC" scheme="https://www.gandyli.xyz/tags/BJWC/"/>
+    
+      <category term="2018" scheme="https://www.gandyli.xyz/tags/2018/"/>
+    
+  </entry>
   
   <entry>
     <title>题解 UVA1146 【Now or later】</title>
