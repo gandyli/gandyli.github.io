@@ -1,3 +1,11 @@
+https://www.gandyli.xyz/题解/题解-UVA1641-【ASCII面积-ASCII-Area】/
+https://www.gandyli.xyz/题解/题解-UVA1339-【Ancient-Cipher】/
+https://www.gandyli.xyz/题解/题解-UVA400-【Unix-ls】/
+https://www.gandyli.xyz/题解/题解-UVA10815-【Andy-s-First-Dictionary】/
+https://www.gandyli.xyz/题解/题解-Luogu-P1379-【八数码难题】/
+https://www.gandyli.xyz/题解/题解-UVA11462-【Age-Sort】/
+https://www.gandyli.xyz/题解/题解-Luogu-P2955-【USACO09OCT-奇数偶数Even-Odd-】/
+https://www.gandyli.xyz/题解/题解-Luogu-P4711-【「化学」相对分子质量】/
 https://www.gandyli.xyz/题解/题解-Luogu-P3879-【TJOI2010-阅读理解】/
 https://www.gandyli.xyz/题解/题解-Luogu-P1689-【方程求解】/
 https://www.gandyli.xyz/题解/题解-UVA232-【Crossword-Answers】/
