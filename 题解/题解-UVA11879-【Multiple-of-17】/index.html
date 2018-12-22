@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="题目：UVa11879 Multiple of 17题目大意：给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。   输入格式：输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。   输出格式：对于每组数据，输出$1$或$0$。  基础知识：首先，我们要记住几个公式：$$(a+b) \t">
+<meta name="description" content="题目：UVa11879 Multiple of 17题目大意：给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。   输入格式：输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。   输出格式：对于每组数据，输出$1$或$0$。">
 <meta name="keywords" content="题解,UVa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="题解 UVA11879 【Multiple of 17】">
 <meta property="og:url" content="https://www.gandyli.xyz/题解/题解-UVA11879-【Multiple-of-17】/index.html">
 <meta property="og:site_name" content="andyli的博客">
-<meta property="og:description" content="题目：UVa11879 Multiple of 17题目大意：给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。   输入格式：输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。   输出格式：对于每组数据，输出$1$或$0$。  基础知识：首先，我们要记住几个公式：$$(a+b) \t">
+<meta property="og:description" content="题目：UVa11879 Multiple of 17题目大意：给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。   输入格式：输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。   输出格式：对于每组数据，输出$1$或$0$。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T04:09:18.636Z">
+<meta property="og:updated_time" content="2018-12-22T12:10:44.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题解 UVA11879 【Multiple of 17】">
-<meta name="twitter:description" content="题目：UVa11879 Multiple of 17题目大意：给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。   输入格式：输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。   输出格式：对于每组数据，输出$1$或$0$。  基础知识：首先，我们要记住几个公式：$$(a+b) \t">
+<meta name="twitter:description" content="题目：UVa11879 Multiple of 17题目大意：给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。   输入格式：输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。   输出格式：对于每组数据，输出$1$或$0$。">
 
 
 
@@ -462,7 +462,7 @@
       
         <h2 id="题目：UVa11879-Multiple-of-17"><a href="#题目：UVa11879-Multiple-of-17" class="headerlink" title="题目：UVa11879 Multiple of 17"></a>题目：<code>UVa11879</code> <code>Multiple of 17</code></h2><h3 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h3><p>给出$N(1\leq N\leq 10^{100})$，判断$N \text{mod} 17$的结果是不是$0$。是则输出$1$，不是则输出$0$。  </p>
 <h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入包含多组数据，每组数据只有一行，为$N$。输入以$0$结束。  </p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>对于每组数据，输出$1$或$0$。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>对于每组数据，输出$1$或$0$。<a id="more"></a></p>
 <hr>
 <h2 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h2><p>首先，我们要记住几个公式：<br>$$(a+b) \text{mod} n=((a \text{mod} n)+(b \text{mod} n)) \text{mod} n$$<br>$$(a-b) \text{mod} n=((a \text{mod} n)-(b \text{mod} n) + n) \text{mod} n$$<br>$$ab \text{mod} n=(a \text{mod} n)(b \text{mod} n) \text{mod} n$$<br>注意在减法中，由于$a \text{mod} n$可能小于$b \text{mod} n$，需要在结果加上$n$，而在乘法中，需要注意$a \text{mod} n$和$b \text{mod} n$相乘是否会溢出。一般乘法要用<code>long long</code>保存中间结果，例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mul_mod</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	a %= n; b %= n;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">int</span>((<span class="keyword">long</span> <span class="keyword">long</span>)a * b % n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
@@ -489,7 +489,7 @@
   <p><span>本文标题:</span><a href="/题解/题解-UVA11879-【Multiple-of-17】/">题解 UVA11879 【Multiple of 17】</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 andyli 的个人博客">andyli</a></p>
   <p><span>发布时间:</span>2018年12月22日 - 12:12</p>
-  <p><span>最后更新:</span>2018年12月22日 - 12:12</p>
+  <p><span>最后更新:</span>2018年12月22日 - 20:12</p>
   <p><span>原始链接:</span><a href="/题解/题解-UVA11879-【Multiple-of-17】/" title="题解 UVA11879 【Multiple of 17】">https://www.gandyli.xyz/题解/题解-UVA11879-【Multiple-of-17】/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.gandyli.xyz/题解/题解-UVA11879-【Multiple-of-17】/" aria-label="复制成功！"></i></span>
   </p>
