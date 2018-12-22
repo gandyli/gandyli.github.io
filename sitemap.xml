@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.gandyli.xyz/friends/index.html</loc>
+    
+    <lastmod>2018-12-22T04:28:04.686Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.gandyli.xyz/%E9%A2%98%E8%A7%A3/%E9%A2%98%E8%A7%A3-Luogu-P1689-%E3%80%90%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3%E3%80%91/</loc>
     
     <lastmod>2018-12-22T04:19:55.918Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://www.gandyli.xyz/%E9%A2%98%E8%A7%A3/%E9%A2%98%E8%A7%A3-UVA1146-%E3%80%90Now-or-later%E3%80%91/</loc>
     
     <lastmod>2018-12-22T03:58:31.474Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.gandyli.xyz/friends/index.html</loc>
-    
-    <lastmod>2018-12-22T03:02:01.953Z</lastmod>
     
   </url>
   
