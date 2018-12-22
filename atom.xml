@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>andyli的博客</title>
   
-  <subtitle>蒟蒻andyli的博客</subtitle>
+  <subtitle>做最好的自己</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.gandyli.xyz/"/>
+  <link href="https://www.gandyli.xyz/"/>
   <updated>2018-12-08T06:45:55.764Z</updated>
-  <id>http://www.gandyli.xyz/</id>
+  <id>https://www.gandyli.xyz/</id>
   
   <author>
     <name>andyli</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Test</title>
-    <link href="http://www.gandyli.xyz/Test/Test/"/>
-    <id>http://www.gandyli.xyz/Test/Test/</id>
+    <link href="https://www.gandyli.xyz/Test/Test/"/>
+    <id>https://www.gandyli.xyz/Test/Test/</id>
     <published>2018-11-14T13:23:07.214Z</published>
     <updated>2018-12-08T06:45:55.764Z</updated>
     
@@ -35,12 +35,12 @@
     
     </summary>
     
-      <category term="Test" scheme="http://www.gandyli.xyz/categories/Test/"/>
+      <category term="Test" scheme="https://www.gandyli.xyz/categories/Test/"/>
     
     
-      <category term="markdown" scheme="http://www.gandyli.xyz/tags/markdown/"/>
+      <category term="markdown" scheme="https://www.gandyli.xyz/tags/markdown/"/>
     
-      <category term="blog" scheme="http://www.gandyli.xyz/tags/blog/"/>
+      <category term="blog" scheme="https://www.gandyli.xyz/tags/blog/"/>
     
   </entry>
   
