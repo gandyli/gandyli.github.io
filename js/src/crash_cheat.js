@@ -1,16 +1,14 @@
-var OriginTitile = document.title;
- var titleTime;
- document.addEventListener('visibilitychange', function () {
- if (document.hidden) {
-     $('[rel="icon"]').attr('href', "/img/TEP.ico");
-     document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
-     clearTimeout(titleTime);
- }
- else {
-     $('[rel="icon"]').attr('href', "/favicon.ico");
-     document.title = '(ฅ>ω<*ฅ) 噫又好了~' + OriginTitile;
-     titleTime = setTimeout(function () {
-         document.title = OriginTitile;
-     }, 2000);
- }
-});
+var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
