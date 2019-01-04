@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gandyli.xyz/404/index.html</loc>
+    <loc>https://gandyli.xyz//404.html</loc>
     
-    <lastmod>2019-01-04T13:39:13.410Z</lastmod>
+    <lastmod>2019-01-04T14:51:28.295Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gandyli.xyz/top/index.html</loc>
+    
+    <lastmod>2019-01-04T14:35:10.400Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://gandyli.xyz/%E9%A2%98%E8%A7%A3/%E9%A2%98%E8%A7%A3-Luogu-P1379-%E3%80%90%E5%85%AB%E6%95%B0%E7%A0%81%E9%9A%BE%E9%A2%98%E3%80%91/</loc>
     
     <lastmod>2018-12-31T14:09:40.378Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gandyli.xyz/top/index.html</loc>
-    
-    <lastmod>2018-12-30T14:56:26.247Z</lastmod>
     
   </url>
   
