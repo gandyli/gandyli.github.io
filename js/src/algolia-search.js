@@ -65,11 +65,11 @@ $(document).ready(function () {
                         .replace(/\$\{hits}/, data.nbHits)
                         .replace(/\$\{time}/, data.processingTimeMS);
           return (
-            stats +
+            stats/* +
             '<span class="algolia-powered">' +
             '  <img src="' + CONFIG.root + 'images/algolia_logo.svg" alt="Algolia" />' +
             '</span>' +
-            '<hr />'
+            '<hr />'*/
           );
         }
       }
