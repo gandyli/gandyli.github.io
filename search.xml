@@ -7,7 +7,7 @@
       <link href="/archives/Test/"/>
       <url>/archives/Test/</url>
       
-        <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+V0bbhMh/pI+gj3cOnvBcqKu1mc0uaY1V2VK2+u0wtpVvJ8bpyNl2shJ2xPZotjl9/tZy0Qq8eCtgnHbGUCgbcff6gM5loe4he5MBiOvR3Y4fmTWHHSt3OcBZcK9rdpw2HI9Sf8D47l3hjvEgqoLwJ8VsHP/ldrQGQqiQnLGwcKsh/u6HImanSrQ5PN//pNP4n9BLHAwUB6m9fB+Swmv6SQx9p9nUo1wo/eEOg6nbs1otro77XSwkw</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "密码错误"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+        <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1/LEkPQkXLremeB4VJAc7mZlsoOz7UdfFI/UAx3h3f2d+k2zSzHC6AzIeGFRkovhQnVizjR9fhRDKJzalJ9uElQDY1tGBcaFIIhmzCurVnzP0MACLP8s7VM+45Grdw50spQrwOF165+eZEzK1mpxsCtqJrwApXcHibbqteogBLkIvFy5/Rm6tc7TL+GLJjL0vPjMijMlMiZSAg4zkjPF+eGS8gjlVUFSJdPXz7g+ifeZOQi3cwkmWMT</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "密码错误"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
       
       
       <categories>
@@ -101,31 +101,6 @@
     </entry>
     
     <entry>
-      <title>题解 UVA1641 【ASCII面积 ASCII Area】</title>
-      <link href="/archives/%E9%A2%98%E8%A7%A3-UVA1641-%E3%80%90ASCII%E9%9D%A2%E7%A7%AF-ASCII-Area%E3%80%91/"/>
-      <url>/archives/%E9%A2%98%E8%A7%A3-UVA1641-%E3%80%90ASCII%E9%9D%A2%E7%A7%AF-ASCII-Area%E3%80%91/</url>
-      
-        <content type="html"><![CDATA[<p>这是一道和几何相关的题目（废话），不过不需要高深的几何知识。</p><p>每一个格子要么全白，要么全黑，要么半白半黑，只要能准确的判断出来即可。</p><p>字符<code>\</code>和<code>/</code>都是半白半黑，问题在于<code>.</code>到底是全白还是全黑。<a id="more"></a></p><p>解决方法是从上到下从左到右处理，沿途统计<code>/</code>和<code>\</code>。当这两个字符出现偶数次时说明接下来的格子在多边形外；奇数次则说明接下来的格子在多边形内。</p><p>可以用一个变量来判断是否在多边形外。<br>AC代码：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">char</span> c;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; c;</span><br><span class="line"><span class="keyword">if</span> (c == <span class="string">'/'</span> || c == <span class="string">'\\'</span>)</span><br><span class="line">&#123;</span><br><span class="line">ans++;</span><br><span class="line">flag = !flag;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (c == <span class="string">'.'</span> &amp;&amp; flag)</span><br><span class="line">ans += <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; ans / <span class="number">2</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 题解 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 题解 </tag>
-            
-            <tag> UVa </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>题解 Luogu P1379 【八数码难题】</title>
       <link href="/archives/%E9%A2%98%E8%A7%A3-Luogu-P1379-%E3%80%90%E5%85%AB%E6%95%B0%E7%A0%81%E9%9A%BE%E9%A2%98%E3%80%91/"/>
       <url>/archives/%E9%A2%98%E8%A7%A3-Luogu-P1379-%E3%80%90%E5%85%AB%E6%95%B0%E7%A0%81%E9%9A%BE%E9%A2%98%E3%80%91/</url>
@@ -145,6 +120,31 @@
             <tag> 题解 </tag>
             
             <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>题解 UVA1641 【ASCII面积 ASCII Area】</title>
+      <link href="/archives/%E9%A2%98%E8%A7%A3-UVA1641-%E3%80%90ASCII%E9%9D%A2%E7%A7%AF-ASCII-Area%E3%80%91/"/>
+      <url>/archives/%E9%A2%98%E8%A7%A3-UVA1641-%E3%80%90ASCII%E9%9D%A2%E7%A7%AF-ASCII-Area%E3%80%91/</url>
+      
+        <content type="html"><![CDATA[<p>这是一道和几何相关的题目（废话），不过不需要高深的几何知识。</p><p>每一个格子要么全白，要么全黑，要么半白半黑，只要能准确的判断出来即可。</p><p>字符<code>\</code>和<code>/</code>都是半白半黑，问题在于<code>.</code>到底是全白还是全黑。<a id="more"></a></p><p>解决方法是从上到下从左到右处理，沿途统计<code>/</code>和<code>\</code>。当这两个字符出现偶数次时说明接下来的格子在多边形外；奇数次则说明接下来的格子在多边形内。</p><p>可以用一个变量来判断是否在多边形外。<br>AC代码：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">char</span> c;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; c;</span><br><span class="line"><span class="keyword">if</span> (c == <span class="string">'/'</span> || c == <span class="string">'\\'</span>)</span><br><span class="line">&#123;</span><br><span class="line">ans++;</span><br><span class="line">flag = !flag;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (c == <span class="string">'.'</span> &amp;&amp; flag)</span><br><span class="line">ans += <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; ans / <span class="number">2</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 题解 </tag>
+            
+            <tag> UVa </tag>
             
         </tags>
       
