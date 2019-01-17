@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gandyli.xyz/friends/index.html</loc>
+    
+    <lastmod>2019-01-17T12:43:45.065Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gandyli.xyz/archives/Test/</loc>
     
     <lastmod>2019-01-13T04:32:45.431Z</lastmod>
@@ -131,13 +138,6 @@
     <loc>https://gandyli.xyz/about/index.html</loc>
     
     <lastmod>2018-12-26T13:12:05.748Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gandyli.xyz/friends/index.html</loc>
-    
-    <lastmod>2018-12-24T13:02:31.522Z</lastmod>
     
   </url>
   
