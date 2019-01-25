@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gandyli.xyz/"/>
-  <updated>2018-12-26T13:24:28.219Z</updated>
+  <updated>2019-01-25T13:26:11.166Z</updated>
   <id>https://gandyli.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>题解 UVA1362 【Exploring Pyramids】</title>
+    <link href="https://gandyli.xyz/archives/%E9%A2%98%E8%A7%A3-UVA1362-%E3%80%90Exploring-Pyramids%E3%80%91/"/>
+    <id>https://gandyli.xyz/archives/题解-UVA1362-【Exploring-Pyramids】/</id>
+    <published>2019-01-25T13:23:54.000Z</published>
+    <updated>2019-01-25T13:26:11.166Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给出一棵多叉树，每个结点的任意两个子结点都有左右之分。从根结点开始，每次尽量往左走，走不通了就回溯，把遇到的字母顺次记录下来，可以得到一个序列。如图所示的$5$个图的序列均为<code>ABABABA</code>。给定一个序列，问有多少棵树与之对应。<br><img src="https://i.loli.net/2019/01/25/5c4b0b522d6bc.png" alt="404 Not Found, Please Called @andyli."></p><h2 id="问题求解"><a href="#问题求解" class="headerlink" title="问题求解"></a>问题求解</h2><p>设输入序列为$S$，$d(i,j)$为子序列$S_i$，$S_{i+1}$，…，$S_j$对应的树的个数，则边界条件是$d(i,i)=1$，且$S_i\not= S_j$时$d(i,j)=0$（因为起点和终点应是同一点）。在其他情况下，设第一个分支在$S_k$时回到树根（必须有$S_i=S_k$），则这个分支对应的序列是$S_{i+1}$，…，$S_{k-1}$，方案数为$d(i+1,k-1)$；其他分支对应的访问序列为$S_k$，…，$S_j$，方案数为$d(k,j)$。这样，在非边界情况，递推关系为$d(i,j)=\text{sum}\{d(i+1,k-1)\times d(k,j)|i+2\le k\le j, S_i=S_k=S_j\}$。</p><h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">305</span>, MOD = <span class="number">1000000000</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> S[maxn];</span><br><span class="line"><span class="keyword">int</span> d[maxn][maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dp</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i == j)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (S[i] != S[j])</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> &amp;ans = d[i][j];</span><br><span class="line">    <span class="keyword">if</span> (ans &gt;= <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = i + <span class="number">2</span>; k &lt;= j; k++)</span><br><span class="line">        <span class="keyword">if</span> (S[i] == S[k])</span><br><span class="line">            ans = (ans + (LL)dp(i + <span class="number">1</span>, k - <span class="number">1</span>) * (LL)dp(k, j)) % MOD;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%s"</span>, S))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(d, <span class="number">-1</span>, <span class="keyword">sizeof</span>(d));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dp(<span class="number">0</span>, <span class="built_in">strlen</span>(S) - <span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;题目大意&lt;/h2&gt;&lt;p&gt;给出一棵多叉树，每个结点的任意两个子结点都有左右之分。从根结点开始，每次尽量往左走，走不通了就回溯，把遇到的字母顺次记录下来
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>题解 UVA1339 【Ancient Cipher】</title>
