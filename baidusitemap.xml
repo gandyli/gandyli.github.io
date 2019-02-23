@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gandyli.xyz/archives/%E9%A2%98%E8%A7%A3-UVA11995-%E3%80%90I-Can-Guess-the-Data-Structure-%E3%80%91/</loc>
+    <lastmod>2019-02-23</lastmod>
+  </url>  <url>
+    <loc>https://gandyli.xyz/archives/%E9%A2%98%E8%A7%A3-UVA11879-%E3%80%90Multiple-of-17%E3%80%91/</loc>
+    <lastmod>2019-02-23</lastmod>
+  </url>  <url>
     <loc>https://gandyli.xyz/archives/%E9%A2%98%E8%A7%A3-UVA1362-%E3%80%90Exploring-Pyramids%E3%80%91/</loc>
     <lastmod>2019-02-01</lastmod>
   </url>  <url>
@@ -47,9 +53,6 @@
     <lastmod>2018-12-26</lastmod>
   </url>  <url>
     <loc>https://gandyli.xyz/archives/%E9%A2%98%E8%A7%A3-UVA11462-%E3%80%90Age-Sort%E3%80%91/</loc>
-    <lastmod>2018-12-26</lastmod>
-  </url>  <url>
-    <loc>https://gandyli.xyz/archives/%E9%A2%98%E8%A7%A3-UVA11879-%E3%80%90Multiple-of-17%E3%80%91/</loc>
     <lastmod>2018-12-26</lastmod>
   </url>
 </urlset>
