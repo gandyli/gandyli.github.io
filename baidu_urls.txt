@@ -18,8 +18,8 @@ https://old.gandyli.xyz/archives/题解-UVA1362-【Exploring-Pyramids】/
 https://old.gandyli.xyz/archives/题解-UVA1339-【Ancient-Cipher】/
 https://old.gandyli.xyz/archives/题解-UVA400-【Unix-ls】/
 https://old.gandyli.xyz/archives/题解-UVA10815-【Andy-s-First-Dictionary】/
-https://old.gandyli.xyz/archives/题解-UVA1641-【ASCII面积-ASCII-Area】/
 https://old.gandyli.xyz/archives/题解-Luogu-P1379-【八数码难题】/
+https://old.gandyli.xyz/archives/题解-UVA1641-【ASCII面积-ASCII-Area】/
 https://old.gandyli.xyz/archives/题解-UVA11462-【Age-Sort】/
 https://old.gandyli.xyz/archives/题解-Luogu-P2955-【USACO09OCT-奇数偶数Even-Odd-】/
 https://old.gandyli.xyz/archives/题解-Luogu-P4711-【「化学」相对分子质量】/
